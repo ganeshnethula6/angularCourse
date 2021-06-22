@@ -1,1 +1,6 @@
-<p>pipes works!</p>
+<h4>Numbers:<br>Status:{{appStatus|async}}
+    <input type="text" [(ngModel)]="filterName">
+    <button (click)="addNumber()">Add Number</button>
+    <p *ngFor="let number of numbers | filterPipe:filterName:'digit'">{{number |uppercase}}</p>
+    <p>{{name |shotern:15}}</p>
+</h4>
